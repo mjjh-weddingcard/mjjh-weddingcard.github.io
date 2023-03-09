@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section1 {
+            flex-basis: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+            Max-height: 100%;
+            Max-width: 726px;
+            Margin: 0 auto;
+        }
+	.section1 img{
+	    height: auto;
+	    max-height: 100%;
+	    max-width: 100%;
+	}
+
+        .fade-in-out {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fade-in-out img {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation-name: fade-in-out;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        .fade-in-out img:first-of-type {
+            animation-delay: 0s;
+        }
+
+        .fade-in-out img:last-of-type {
+            animation-delay: 2s;
+        }
+
+        .section2 {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .greeting {
+            margin-bottom: 5%;
+        }
+
+        .greeting p {
+            margin: 0 0 2% 0;
+        }
+
+        .date-time-place {
+            margin-bottom: 10%;
+        }
+
+        .date-time-place p {
+            margin: 0;
+        }
+
+        .section3 {
+            flex-basis: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+            Max-height: 100%;
+            Max-width: 726px%;
+            Margin: 0 auto;
+        }
+
+        .images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
+        }
+
+        .images img {
+	    max-width: 50%;
+	    height: auto;
+	    margin: 5px;
+	    transform: scale(0.5);
+        }
+
+	.sectionMAP{
+	    flex-basis: 100%;
+	    padding: 10% 5%;
+	    background-color: #ffff;
+	}
+
+        .images img:first-of-type {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .images img:last-of-type {
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        @keyframes fade-in-out {
+            from {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section1">
+            <div class="fade-in-out">
+                <img src="img/img2_standing.jpg" alt="img1">
+                <img src="img/JHMJ_Drawing2.png" alt="img2">
+            </div>
+        </div>
+        <div class="section2">
+            <div class="greeting">
+                <p>하나님의 은혜로 6년의 시간을 함께 보내고,</p>
+                <p>새로운 시작을 향해 작은 걸음 내딛어보려 합니다.</p>
+                <p>오셔서 저희가 걸어갈 길을 응원하고 축복해주세요.</p>
+            </div>
+            <div class="date-time-place">
+                <p>일시: 2023년 5월13일(토) 12시 30분</p>
+                <p>장소: 수지 목양감리교회</p>
+            </div>
+        </div>
+	<div class="sectionMAP">
+	<div>
+
+
+
+        <div class="section3">
+            <div class="images">
+                <img src="img/img1_sit.jpg" alt="img3">
+                <img src="img/img3_handbyhand.jpg" alt="img4">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
