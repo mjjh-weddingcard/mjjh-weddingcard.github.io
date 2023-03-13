@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <style>
         * {
@@ -11,12 +10,18 @@
         }
 
         html {
-            font-size: 62.5%;
+            font-size: 10px;
         }
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Pretendard-Regular;
             font-size: 1.6rem;
             line-height: 1.2;
         }
@@ -28,35 +33,35 @@
             flex-wrap: wrap;
         }
 
-        .section1 {
-            flex-basis: 100%;
-            position: relative;
-            padding-bottom: 100%;
-            max-height: 100%;
-        }
-
-        .section1 img {
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+	.section1 {
+	    flex-basis: 100%;
+	    position: relative;
+	    padding-bottom: 56.25%;
+	    max-height: 100%;
+	    max-width: 726px;
+	    margin: 0 auto;
+	}
+	.section1 img{
+	    height: auto;
+	    max-height: 100%;
+	    max-width: 100%;
+	}
 
         .fade-in-out {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-22%,-50%);
             width: 100%;
             height: 100%;
             display: flex;
+            text-align: center ;
             align-items: center;
             justify-content: center;
         }
 
         .fade-in-out img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             position: absolute;
             top: 0;
@@ -75,69 +80,31 @@
             animation-delay: 2s;
         }
 
-        .section2 {
+        .greeting-section {
             flex-basis: 100%;
             padding: 10% 5%;
             background-color: #f7f7f7;
             text-align: center;
         }
-
-        .greeting {
-            margin-bottom: 5%;
-        }
-
-        .greeting p {
-            margin: 0 0 2% 0;
-        }
-
-        .date-time-place {
-            margin-bottom: 10%;
-        }
-
-        .date-time-place p {
-            margin: 0;
-        }
-
-        .section3 {
-            flex-basis: 100%;
-            position: relative;
-            padding-bottom: 100%;
-            max-height: 100%;
-        }
-
-        .images {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .images img {
-            width: 45%;
-            height: auto;
-            margin: 2.5%;
-            transform: scale(0.5);
-        }
-
-        .sectionMAP {
+        .date-location-section {
             flex-basis: 100%;
             padding: 10% 5%;
-            background-color: #ffff;
-        }
+            text-align: center;
+<!--            background-color: #f7f7f7; -->
 
-        .images img:first-of-type {
-            left: 20%;
-            animation-delay: 0s;
         }
+        .map-section {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            text-align: center;
+<!--            background-color: #f7f7f7; -->
 
-        .images img:last-of-type {
-            left: 80%;
-            animation-delay: 2s;
+        }
+        .bgm-section {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            background-color: #f7f7f7;
+            text-align: center;
         }
 
         @keyframes fade-in-out {
@@ -157,40 +124,60 @@
                 opacity: 0;
             }
         }
+	
+
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="section1">
+    <!-- 1st section: Image -->
+    <section class="section1">
             <div class="fade-in-out">
                 <img src="img/img1.jpg" alt="img1">
                 <img src="img/img2_drawing.jpg" alt="img2">
             </div>
-        </div>
-        <div class="section2">
-            <div class="greeting">
+    </section>
+
+    <!-- 2nd section: Greeting comment -->
+    <section class="greeting-section">
+        <h2>Greetings</h2>
                 <p>하나님의 은혜로 6년의 시간을 함께 보내고,</p>
                 <p>새로운 시작을 향해 작은 걸음 내딛어보려 합니다.</p>
                 <p>오셔서 저희가 걸어갈 길을 응원하고 축복해주세요.</p>
-            </div>
-            <div class="date-time-place">
-                <p>일시: 2023년 5월13일(토) 12시 30분</p>
-                <p>장소: 수지 목양감리교회</p>
-            </div>
+
+    </section>
+
+    <!-- 3rd section: Date and Location -->
+    <section class="date-location-section">
+        <h2>Date and Location</h2>
+        <p>Date: 2023년 5월13일(토) 12시 30분</p>
+        <p>Location: 수지 목양감리교회</p>
+    </section>
+
+    <!-- 4th section: Map (Google Map embedded) -->
+    <section class="map-section">
+        <h2>찾아오시는 길</h2>
+        <div class="google-map">
+            <!-- Embed your Google Map here -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.993323985642!2d127.08934141499921!3d37.342666744675526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59854f13ae6b%3A0x3ecffec1b85d44cd!2z66qp7JaR6rWQ7ZqM!5e0!3m2!1sko!2skr!4v1678713522311!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-	<div class="sectionMAP">
+    </section>
+
+    <!-- 5th section: Other images -->
+    <section class="other-images-section">
+        <h2>다른사진들</h2>
+        <div class="other-images-container">
+            <img src="img/img3.jpg" alt="your-other-image-1-alt">
+            <img src="img/img4.jpg" alt="your-other-image-2-alt">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- 6th section: BGM (YouTube embedded) -->
+    <section class="bgm-section">
+        <h2>함께부를노래</h2>
+        <div class="youtube-video">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/5kpRRBCO73E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</div>
-
-
-
-        <div class="section3">
-            <div class="images">
-                <img src="img/img3.jpg" alt="img3">
-                <img src="img/img4.jpg" alt="img4">
-            </div>
-        </div>
-    </div>
+    </section>
 </body>
-
 </html>
