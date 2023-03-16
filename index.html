@@ -86,12 +86,17 @@
 
 <!-- Modified version by askup -->
     .section1 {
-        flex-basis: 100%;
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 726px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 400px);
+    }
+
+    @media (max-width: 767px) {
+        .section1 {
+            height: auto;
+        }
     }
 
     .section1 img {
