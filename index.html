@@ -12,12 +12,12 @@
         html {
             font-size: 10px;
         }
-	@font-face {
-	    font-family: 'Pretendard-Regular';
-	    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-	    font-weight: 400;
-	    font-style: normal;
-	}
+    	@font-face {
+	        font-family: 'Pretendard-Regular';
+	        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	        font-weight: 400;
+	        font-style: normal;
+	    }
 
         body {
             margin: 0;
@@ -25,6 +25,36 @@
             font-size: 1.6rem;
             line-height: 1.2;
         }
+
+
+        @media (max-width: 767px) {
+            .map-section iframe {
+                width: 100%;
+                height: calc(100vh - 200px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .section1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+          }
+
+          .map-section iframe {
+            width: 50%;
+            height: 400px;
+          }
+
+          .section1 img {
+            width: 45%;
+            height: auto;
+          }
+        }
+
+
+
 <!--
         .container {
             max-width: 100%;
@@ -33,6 +63,9 @@
             flex-wrap: wrap;
         }
 -->
+
+<!-- origin
+
 	.section1 {
 	    flex-basis: 100%;
 	    position: relative;
@@ -49,7 +82,26 @@
 	    max-height: 100%;
 	    max-width: 100%;
 	}
+-->
 
+<!-- Modified version by askup -->
+    .section1 {
+        flex-basis: 100%;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 726px;
+    }
+
+    .section1 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
         .fade-in-out {
             position: absolute;
             top: 50%;
@@ -57,8 +109,8 @@
             transform: translate(-50%,-50%);
             width: 100%;
             height: 100%;
-	    margin-left: auto;
-	    margin-right: auto;
+	        margin-left: auto;
+	        margin-right: auto;
 
             display: flex;
             text-align: center ;
@@ -137,7 +189,7 @@
                 opacity: 0;
             }
         }
-	
+
 
     </style>
 </head>
