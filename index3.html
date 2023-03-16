@@ -1,0 +1,226 @@
+<!-- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+    	@font-face {
+	        font-family: 'Pretendard-Regular';
+	        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	        font-weight: 400;
+	        font-style: normal;
+	    }
+
+        body {
+            margin: 0;
+            font-family: Pretendard-Regular;
+            font-size: 1.6rem;
+            line-height: 1.2;
+
+        }
+
+
+        @media (max-width: 767px) {
+            .map-section iframe {
+                width: 100%;
+                height: calc(100vh - 200px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .section1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+          }
+
+          .map-section iframe {
+            width: 50%;
+            height: 400px;
+          }
+
+          .section1 img {
+            width: 45%;
+            height: auto;
+          }
+        }
+
+<!-- Modified version by askup -->
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100% - 400px);
+    }
+
+    @media (max-width: 767px) {
+        .section1 {
+            height: auto;
+        }
+    }
+
+    .section1 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+        .fade-in-out {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            height: 100%;
+	        margin-left: auto;
+	        margin-right: auto;
+
+            display: flex;
+            text-align: center ;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fade-in-out img {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation-name: fade-in-out;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .fade-in-out img:first-of-type {
+            animation-delay: 0s;
+        }
+
+        .fade-in-out img:last-of-type {
+            animation-delay: 1.5s;
+        }
+
+        .greeting-section {
+            height:400px;
+            flex-basis: 100%;
+            padding: 10% 5%;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+        .date-location-section {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            text-align: center;
+<!--            background-color: #f7f7f7; -->
+
+        }
+        .map-section {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            text-align: center;
+<!--            background-color: #f7f7f7; -->
+
+        }
+        .other-images-section {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            text-align: center;
+<!--            background-color: #f7f7f7; -->
+
+        }
+        .bgm-section {
+            flex-basis: 100%;
+            padding: 10% 5%;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        @keyframes fade-in-out {
+            from {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 1st section: Image -->
+    <section class="section1">
+            <div class="fade-in-out">
+                <img src="img/img1.jpg" alt="img1">
+                <img src="img/img2_drawing.jpg" alt="img2">
+            </div>
+    </section>
+
+    <!-- 2nd section: Greeting comment -->
+    <section class="greeting-section">
+        <h2>Greetings</h2>
+                <p>하나님의 은혜로 6년의 시간을 함께 보내고,</p>
+                <p>새로운 시작을 향해 작은 걸음 내딛어보려 합니다.</p>
+                <p>오셔서 저희가 걸어갈 길을 응원하고 축복해주세요.</p>
+
+    </section>
+
+    <!-- 3rd section: Date and Location -->
+    <section class="date-location-section">
+        <h2>Date and Location</h2>
+        <p>Date: 2023년 5월13일(토) 12시 30분</p>
+        <p>Location: 수지 목양감리교회</p>
+    </section>
+
+    <!-- 4th section: Map (Google Map embedded) -->
+    <section class="map-section">
+        <h2>찾아오시는 길</h2>
+        <div class="google-map">
+            <!-- Embed your Google Map here -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.993323985642!2d127.08934141499921!3d37.342666744675526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59854f13ae6b%3A0x3ecffec1b85d44cd!2z66qp7JaR6rWQ7ZqM!5e0!3m2!1sko!2skr!4v1678713522311!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- 5th section: Other images -->
+    <section class="other-images-section">
+        <h2>다른사진들</h2>
+        <div class="other-images-container">
+            <img src="img/img3.jpg" alt="your-other-image-1-alt">
+            <img src="img/img4.jpg" alt="your-other-image-2-alt">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- 6th section: BGM (YouTube embedded) -->
+    <section class="bgm-section">
+        <h2>함께부를노래</h2>
+        <div class="youtube-video">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/5kpRRBCO73E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+    </section>
+</body>
+</html>
