@@ -1,4 +1,4 @@
-<!--230318_0155 -->
+<!--230318_0200 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +38,8 @@
             position: absolute;
             overflow: hidden;
         }
+
+<!------------------------------------
         .img-fade-in-out-section img {
             width: 726px;
             height: auto;
@@ -126,6 +128,35 @@
                 });
             });
         </script>
+------------------------------------->
+<!--------------------------------------->
+<!--------------------------------------->
+
+        .fade-in-out-section img {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation-name: fade-in-out;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        .fade-in-out-section img:first-of-type {
+            animation-delay: 0s;
+        }
+
+        .fade-in-out-section img:last-of-type {
+            animation-delay: 2s;
+        }
+
+
+
+<!--------------------------------------->
+<!--------------------------------------->
+<!--------------------------------------->
 
 
 <!--section2 : greeting-section -->
