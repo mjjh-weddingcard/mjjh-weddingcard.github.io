@@ -1,4 +1,4 @@
-<!--230318_0115 -->
+<!--230318_0130 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,12 +38,16 @@
             width: 726px;
             height: auto;
             left: 50%;
-            transform: translateX(-50%);
 
             animation: fade-in-out 3s ease-in-out infinite;
         }
 
         .img-fade-in-out-section .img1 {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
               width: 100%;
               height: 100%;
               object-fit: cover;
@@ -76,6 +80,12 @@
 
         @media (min-width: 768px) {
             .img-fade-in-out-section img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
                 width: 726px;
                 height: auto;
                 left: 50%;
@@ -101,7 +111,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                animation-delay: 1.5s;
+                animation-delay: 1.5s
             }
         }
 
@@ -125,6 +135,7 @@
 
         @media (min-width: 768px) {
             .greeting-section {
+                background-color: #DABBBB;   <!-- 218 187 187  -->
             }
         }
 
