@@ -1,4 +1,4 @@
-<!--230318_0050 -->
+<!--230318_0115 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,12 @@
             overflow: hidden;
         }
         .img-fade-in-out-section img {
-              animation: fade-in-out 3s ease-in-out infinite;
+            width: 726px;
+            height: auto;
+            left: 50%;
+            transform: translateX(-50%);
+
+            animation: fade-in-out 3s ease-in-out infinite;
         }
 
         .img-fade-in-out-section .img1 {
@@ -74,9 +79,13 @@
                 width: 726px;
                 height: auto;
                 left: 50%;
-                transform: translateX(-50%);
             }
             .img-fade-in-out-section .img1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
