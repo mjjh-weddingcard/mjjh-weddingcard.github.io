@@ -1,4 +1,4 @@
-<!--230318_1220 -->
+<!--230318_1225 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,14 +49,31 @@
             animation-iteration-count: infinite;
         }
 
-        .fade-in-out img:first-of-type {
+        .img-fade-in-out img:first-of-type {
             animation-delay: 0s;
         }
 
-        .fade-in-out img:last-of-type {
+        .img-fade-in-out img:last-of-type {
             animation-delay: 2s;
         }
 
+        @keyframes img-fade-in-out {
+            from {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
 
 
 
