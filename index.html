@@ -1,4 +1,4 @@
-<!--230330_1650 -->
+<!--230330_1730 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,17 +20,9 @@
 	        font-style: normal;
 	    }
 
-        @media screen and (max-width: 767px) {
-          .img1, .img3, .img4 {
-            width: 80%;
-            height: auto;
-          }
-        }
-
-        /* 컴퓨터에서 이미지 크기 조절 */
         @media screen and (min-width: 768px) {
           .img1, .img3, .img4 {
-            width: 726px;
+            width: 320px;
             height: auto;
           }
         }
@@ -42,17 +34,11 @@
             font-size: 1.6rem;
             line-height: 1.2;
         }
-        .img {
-            width: 726px;
-            height: auto;
-
-        }
 
 <!--section1 : img-fade-in-out-section -->
         .img-fade-in-out-section {
             position: absolute;
-
-            width: 726px;
+            width: 80%;
             height: auto;
             left: 50%;
             top: 0;
@@ -60,14 +46,17 @@
             position: absolute;
             overflow: hidden;
         }
+
+<!--
         .img-fade-in-out-section img {
-            width: 726px;
+            width: 80%;
             height: auto;
             left: 50%;
             top: 0;
             left: 0;
         }
 
+-->
 
 
 <!--------------------------------------->
@@ -82,13 +71,6 @@
             text-align: center;
             background-color: #DABBBB;   <!-- 218 187 187  -->
         }
-
-        @media (min-width: 768px) {
-            .greeting-section {
-                background-color: #DABBBB;   <!-- 218 187 187  -->
-            }
-        }
-
 
 <!--section3 : date and location -->
 
@@ -112,6 +94,7 @@
             .date-location-section {
                 justify-content: center;
                 align-items: center;
+
             }
 
             .date-location-section h2 {
@@ -128,6 +111,13 @@
 <!--section4 : map -->
         .map-section {
             padding: 50px;
+
+        }
+
+        .map-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 50px;
         }
 
         @media (min-width: 768px) {
@@ -143,6 +133,26 @@
             }
         }
 
+
+<!--section4.5 : contact -->
+
+        .contact {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .contact p {
+            margin-top: 20px;
+        }
+
+
+
 <!--section5 : bgm -->
         .bgm-section {
             flex-basis: 100%;
@@ -155,13 +165,13 @@
 <!--section6 : img slide -->
 
         .other-images-section {
-            width: 726px;
+            width: auto;
             height: auto;
             left: 50%;
         }
 
         .other-images-section img {
-            width: 726px;
+            width: 80%;
             height: auto;
             left: 50%;
 
@@ -175,24 +185,30 @@
 </head>
 <body>
     <!-- 1st section: Image -->
-    <section class="img-fade-in-out-section" style ="height : 1100px">
+    <section class="img-fade-in-out-section">
             <img src="img/img1.gif" alt="img1">
     </section>
 
     <!-- 2nd section: Greeting comment -->
     <section class="greeting-section">
-        <h2>Greetings</h2>
+        <h2>결혼합니다</h2>
                 <p>하나님의 은혜로 6년의 시간을 함께 보내고,</p>
                 <p>새로운 시작을 향해 작은 걸음 내딛어보려 합니다.</p>
                 <p>오셔서 저희가 걸어갈 길을 응원하고 축복해주세요.</p>
+                <br>
+
+                <p>김달환, 이정민의 아들   <b>김주혁</b></p>
+                <p>김용주, 정해숙의 딸   <b>김민정</b></p>
+
 
     </section>
 
     <!-- 3rd section: Date and Location -->
     <section class="date-location-section">
-        <h2>Date and Location</h2>
-        <p>Date: 2023년 5월13일(토) 12시 30분</p>
-        <p>Location: 수지 목양감리교회</p>
+        <h2>일시와 장소</h2>
+        <p>일시: 2023년 5월13일(토) 12시 30분</p>
+        <p>장소: 수지 목양감리교회</p>
+        <p>(경기 용인시 수지구 고기로67번길 31)</p>
     </section>
 
     <!-- 4th section: Map (Google Map embedded) -->
@@ -203,6 +219,16 @@
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.993323985642!2d127.08934141499921!3d37.342666744675526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b59854f13ae6b%3A0x3ecffec1b85d44cd!2z66qp7JaR6rWQ7ZqM!5e0!3m2!1sko!2skr!4v1678713522311!5m2!1sko!2skr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+
+    <!-- 4.5th section: Contact -->
+    <section class="contact">
+        <h2>축하 연락처</h2>
+        <p>김주혁 : 010-7346-2133</p>
+        <p>김민정 : 010-9388-5929</p>
+
+
+    </section>
+
 
     <!-- 5th section: BGM (YouTube embedded) -->
     <section class="bgm-section">
@@ -216,8 +242,8 @@
     <section class="other-images-section">
         <h2>다른사진들</h2>
         <div class="other-images-container">
-            <img src="img/img3.jpg" alt="your-other-image-1-alt">
-            <img src="img/img4.jpg" alt="your-other-image-2-alt">
+            <img src="img/img3.jpg" alt="img3">
+            <img src="img/img4.jpg" alt="img4">
             <!-- Add more images as needed -->
         </div>
     </section>
